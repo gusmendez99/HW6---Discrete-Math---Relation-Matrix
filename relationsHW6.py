@@ -27,6 +27,7 @@ def isOptionInRange(x, a, b):
 
 #MATRIX RELATION PROPERTIES UTILS
 def isReflexive(binaryMatrix):
+    identityMatrix = []
 	identityBinary = BinaryRelationMatrix(identityMatrix)
 	return(identityBinary.precedence(binaryMatrix.matrix))
 
