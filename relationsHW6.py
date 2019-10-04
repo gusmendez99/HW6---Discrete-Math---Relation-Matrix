@@ -56,9 +56,12 @@ class BinaryRelationMatrix(object):
 		# Numpy matrix
 		self.matrix = matrix
 
+	#pending...
 	def multiplication(self, inputMatrix):
-		dotMatrix = np.dot(self.matrix, inputMatrix)
-		return (BinaryRelationMatrix(dotMatrix))
+		a = np.array(self.matrix, dtype=bool)
+		b = np.array(inputMatrix, dtype=bool)
+		dotMatrix = np.dot(a, b)
+		return (BinaryRelationMatrix(1*dotMatrix))
 	
 	def intersection(self, inputMatrix):
 		a = np.array(self.matrix, dtype=bool)
@@ -86,7 +89,7 @@ option = 1
 while(option != 2):
 	print("\n\t\tWELCOME!\n")
 	print("""
-		----------------------------
+		-------------------------python---
 		Choose an option:
 		1. Show relation matrix properties
 		2. Exit
